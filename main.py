@@ -38,7 +38,7 @@ def read_root():
 def readPosts():
   cursor.execute("SELECT * FROM posts")
   posts = cursor.fetchall()
-  posts_obj = []
+  posts_arr = []
   for post in posts:
     post_dict = {
       "id": post[0],
@@ -48,7 +48,7 @@ def readPosts():
     }
     posts_obj.append(post_dict)
  
-  return {"Status": "success", "Posts": posts_obj}
+  return {"Status": "success", "Posts": posts_arr}
 
 # 取得單筆Post
 @app.get('/posts/{id}')
