@@ -46,7 +46,7 @@ def readPosts():
       "content": post[2],
       "published": post[3]
     }
-    posts_obj.append(post_dict)
+    posts_arr.append(post_dict)
  
   return {"Status": "success", "Posts": posts_arr}
 
